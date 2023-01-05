@@ -109,6 +109,7 @@
 		A8C7230629671D0C0032087C /* EsayNews */ = {
 			isa = PBXGroup;
 			children = (
+				A8C7234629672DFC0032087C /* Shared API Infrastructure */,
 				A8C7234529672DBE0032087C /* Shared API */,
 				A8C7233A296720690032087C /* Article API */,
 				A8C7230729671D0C0032087C /* AppDelegate.swift */,
@@ -146,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				A8C7233B2967208F0032087C /* RemoteArticleItem.swift */,
-				A8C7233F296724EC0032087C /* URLSessionHTTPClient.swift */,
 			);
 			path = "Article API";
 			sourceTree = "<group>";
@@ -172,6 +172,14 @@
 				A8C7233D296723890032087C /* HTTPClient.swift */,
 			);
 			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		A8C7234629672DFC0032087C /* Shared API Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A8C7233F296724EC0032087C /* URLSessionHTTPClient.swift */,
+			);
+			path = "Shared API Infrastructure";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
