@@ -18,6 +18,7 @@
 		A8C7232C29671D0E0032087C /* EsayNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7232B29671D0E0032087C /* EsayNewsUITests.swift */; };
 		A8C7232E29671D0E0032087C /* EsayNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7232D29671D0E0032087C /* EsayNewsUITestsLaunchTests.swift */; };
 		A8C7233C2967208F0032087C /* RemoteArticleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7233B2967208F0032087C /* RemoteArticleItem.swift */; };
+		A8C7233E296723890032087C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7233D296723890032087C /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A8C7232B29671D0E0032087C /* EsayNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsayNewsUITests.swift; sourceTree = "<group>"; };
 		A8C7232D29671D0E0032087C /* EsayNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsayNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A8C7233B2967208F0032087C /* RemoteArticleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArticleItem.swift; sourceTree = "<group>"; };
+		A8C7233D296723890032087C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				A8C7233B2967208F0032087C /* RemoteArticleItem.swift */,
+				A8C7233D296723890032087C /* HTTPClient.swift */,
 			);
 			path = "Article API";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				A8C7231229671D0C0032087C /* EsayNews.xcdatamodeld in Sources */,
 				A8C7230C29671D0C0032087C /* ViewController.swift in Sources */,
+				A8C7233E296723890032087C /* HTTPClient.swift in Sources */,
 				A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */,
 				A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */,
 				A8C7233C2967208F0032087C /* RemoteArticleItem.swift in Sources */,
