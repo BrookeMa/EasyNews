@@ -21,6 +21,7 @@
 		A8C7233E296723890032087C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7233D296723890032087C /* HTTPClient.swift */; };
 		A8C72340296724EC0032087C /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7233F296724EC0032087C /* URLSessionHTTPClient.swift */; };
 		A8C7234429672A600032087C /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7234329672A600032087C /* XCTestCase+MemoryLeakTracking.swift */; };
+		A8C7234829672F360032087C /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7234729672F360032087C /* URLSessionHTTPClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		A8C7233D296723890032087C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		A8C7233F296724EC0032087C /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		A8C7234329672A600032087C /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		A8C7234729672F360032087C /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		A8C72342296729FC0032087C /* Article API */ = {
 			isa = PBXGroup;
 			children = (
+				A8C7234729672F360032087C /* URLSessionHTTPClientTests.swift */,
 			);
 			path = "Article API";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8C7232229671D0E0032087C /* EsayNewsTests.swift in Sources */,
+				A8C7234829672F360032087C /* URLSessionHTTPClientTests.swift in Sources */,
 				A8C7234429672A600032087C /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
