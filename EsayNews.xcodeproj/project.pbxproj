@@ -167,7 +167,6 @@
 		A8C72342296729FC0032087C /* Article API */ = {
 			isa = PBXGroup;
 			children = (
-				A8C7234729672F360032087C /* URLSessionHTTPClientTests.swift */,
 			);
 			path = "Article API";
 			sourceTree = "<group>";
@@ -191,9 +190,18 @@
 		A8C7234B296734C10032087C /* Shared API Infra */ = {
 			isa = PBXGroup;
 			children = (
-				A8C7234C296734D40032087C /* URLProtocolStub.swift */,
+				A8C7234E2967438F0032087C /* Helpers */,
+				A8C7234729672F360032087C /* URLSessionHTTPClientTests.swift */,
 			);
 			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		A8C7234E2967438F0032087C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A8C7234C296734D40032087C /* URLProtocolStub.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
