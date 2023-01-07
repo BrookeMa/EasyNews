@@ -48,6 +48,14 @@ final class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertEqual(receivedError?.code, URLError.cancelled.rawValue)
     }
     
+    func test_getFromURL_failsOnRequestsError() {
+        let requestError = anyNSError()
+        
+        let receivedError = resultErrorFor((data: nil, response: nil, error: requestError))
+        
+        XCTAssertNotNil(receivedError)
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> HTTPClient {
@@ -56,9 +64,21 @@ final class URLSessionHTTPClientTests: XCTestCase {
         return sut
     }
     
-    private func resultErrorFor(_ values: (data: Data?, resposne: URLResponse?, error: Error?)? = nil, taskHandler: (HTTPClientTask) -> Void = { _ in }, file: StaticString = #filePath, line: UInt = #line) -> Error? {
-        let result = resultFor(values, taskHandler: taskHandler, file: file, line: line)
+    private func resultValuesFor(_ values: (data: Data?, response: URLResponse?, error: Error?), file: StaticString = #filePath, line: UInt = #line) -> (data: Data, response: HTTPURLResponse)? {
+        let result = resultFor(values, file: file, line: line)
         
+        switch result {
+        case let .success(values):
+            return values
+        default:
+            XCTFail("Expected success, got \(result) instead", file: file, line: line)
+            return nil
+        }
+    }
+    
+    private func resultErrorFor(_ values: (data: Data?, response: URLResponse?, error: Error?)? = nil, taskHandler: (HTTPClientTask) -> Void = { _ in }, file: StaticString = #filePath, line: UInt = #line) -> Error? {
+        let result = resultFor(values, taskHandler: taskHandler, file: file, line: line)
+
         switch result {
         case let .failure(error):
             return error
@@ -68,7 +88,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         }
     }
     
-    private func resultFor(_ values: (data: Data?, resposne: URLResponse?, error: Error?)?, taskHandler: (HTTPClientTask) -> Void = { _ in }, file: StaticString = #filePath, line: UInt = #line) -> HTTPClient.Result {
+    private func resultFor(_ values: (data: Data?, response: URLResponse?, error: Error?)?, taskHandler: (HTTPClientTask) -> Void = { _ in },  file: StaticString = #filePath, line: UInt = #line) -> HTTPClient.Result {
         
         values.map { URLProtocolStub.stub(data: $0, response: $1, error: $2)}
         
