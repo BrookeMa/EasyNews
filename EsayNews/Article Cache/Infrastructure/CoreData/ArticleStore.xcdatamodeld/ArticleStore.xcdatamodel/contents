@@ -8,5 +8,10 @@
         <attribute name="source" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
         <attribute name="url" attributeType="URI"/>
+        <relationship name="cache" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedCache" inverseName="article" inverseEntity="ManagedCache"/>
+    </entity>
+    <entity name="ManagedCache" representedClassName="ManagedCache" syncable="YES">
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedArticle" inverseName="cache" inverseEntity="ManagedArticle"/>
     </entity>
 </model>

@@ -16,6 +16,14 @@ class ManagedArticle: NSManagedObject {
     @NSManaged var source: String
     @NSManaged var image: URL?
     @NSManaged var published_at: Date
+    
+    @NSManaged var cache: NSOrderedSet
 }
 
-
+extension ManagedArticle {
+    static func find(in context: NSManagedObjectContext) throws -> ManagedCache? {
+        let request = NSFetchRequest<ManagedCache>(entityName: entity().name!)
+        request.returnsObjectsAsFaults = false
+        return try context.fetch(request).first
+    }
+}
