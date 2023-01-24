@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8138B3E2980399500A24E4F /* ManagedArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8138B3D2980399500A24E4F /* ManagedArticle.swift */; };
+		A8138B4429803AC500A24E4F /* ArticleStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8138B4229803AC500A24E4F /* ArticleStore.xcdatamodeld */; };
 		A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230729671D0C0032087C /* AppDelegate.swift */; };
 		A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230929671D0C0032087C /* SceneDelegate.swift */; };
 		A8C7230F29671D0C0032087C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7230D29671D0C0032087C /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8138B3D2980399500A24E4F /* ManagedArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedArticle.swift; sourceTree = "<group>"; };
+		A8138B4329803AC500A24E4F /* ArticleStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleStore.xcdatamodel; sourceTree = "<group>"; };
 		A8C7230429671D0C0032087C /* EsayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C7230729671D0C0032087C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C7230929671D0C0032087C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8138B3C29802A8600A24E4F /* Article Cache */ = {
+			isa = PBXGroup;
+			children = (
+				A8138B3D2980399500A24E4F /* ManagedArticle.swift */,
+				A8138B4229803AC500A24E4F /* ArticleStore.xcdatamodeld */,
+			);
+			path = "Article Cache";
+			sourceTree = "<group>";
+		};
 		A8C722FB29671D0C0032087C = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,7 @@
 		A8C7230629671D0C0032087C /* EsayNews */ = {
 			isa = PBXGroup;
 			children = (
+				A8138B3C29802A8600A24E4F /* Article Cache */,
 				A8C7236F296B46700032087C /* Article Feature */,
 				A8C7234629672DFC0032087C /* Shared API Infra */,
 				A8C7234529672DBE0032087C /* Shared API */,
@@ -357,11 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8138B3E2980399500A24E4F /* ManagedArticle.swift in Sources */,
 				A8C72375296B54180032087C /* HTTPURLResponse+StatusCode.swift in Sources */,
 				A8C72340296724EC0032087C /* URLSessionHTTPClient.swift in Sources */,
 				A8C7231229671D0C0032087C /* EsayNews.xcdatamodeld in Sources */,
 				A8C72373296B4A740032087C /* Article.swift in Sources */,
 				A8C72371296B46A60032087C /* ArticleLoader.swift in Sources */,
+				A8138B4429803AC500A24E4F /* ArticleStore.xcdatamodeld in Sources */,
 				A8C7233E296723890032087C /* HTTPClient.swift in Sources */,
 				A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */,
 				A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */,
@@ -712,6 +728,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		A8138B4229803AC500A24E4F /* ArticleStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A8138B4329803AC500A24E4F /* ArticleStore.xcdatamodel */,
+			);
+			currentVersion = A8138B4329803AC500A24E4F /* ArticleStore.xcdatamodel */;
+			path = ArticleStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		A8C7231029671D0C0032087C /* EsayNews.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
