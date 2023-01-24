@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A8138B3E2980399500A24E4F /* ManagedArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8138B3D2980399500A24E4F /* ManagedArticle.swift */; };
 		A8138B4429803AC500A24E4F /* ArticleStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8138B4229803AC500A24E4F /* ArticleStore.xcdatamodeld */; };
+		A84B38B7298047B900612343 /* CoreDataArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B38B6298047B900612343 /* CoreDataArticleStore.swift */; };
+		A84B38B92980482200612343 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B38B82980482200612343 /* CoreDataHelpers.swift */; };
 		A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230729671D0C0032087C /* AppDelegate.swift */; };
 		A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230929671D0C0032087C /* SceneDelegate.swift */; };
 		A8C7230F29671D0C0032087C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7230D29671D0C0032087C /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		A8138B3D2980399500A24E4F /* ManagedArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedArticle.swift; sourceTree = "<group>"; };
 		A8138B4329803AC500A24E4F /* ArticleStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleStore.xcdatamodel; sourceTree = "<group>"; };
+		A84B38B6298047B900612343 /* CoreDataArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataArticleStore.swift; sourceTree = "<group>"; };
+		A84B38B82980482200612343 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		A8C7230429671D0C0032087C /* EsayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C7230729671D0C0032087C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C7230929671D0C0032087C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,10 +105,28 @@
 		A8138B3C29802A8600A24E4F /* Article Cache */ = {
 			isa = PBXGroup;
 			children = (
-				A8138B3D2980399500A24E4F /* ManagedArticle.swift */,
-				A8138B4229803AC500A24E4F /* ArticleStore.xcdatamodeld */,
+				A84B38BA298054B600612343 /* Infrastructure */,
 			);
 			path = "Article Cache";
+			sourceTree = "<group>";
+		};
+		A84B38BA298054B600612343 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A84B38BB298054D000612343 /* CoreData */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A84B38BB298054D000612343 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A8138B4229803AC500A24E4F /* ArticleStore.xcdatamodeld */,
+				A84B38B82980482200612343 /* CoreDataHelpers.swift */,
+				A8138B3D2980399500A24E4F /* ManagedArticle.swift */,
+				A84B38B6298047B900612343 /* CoreDataArticleStore.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		A8C722FB29671D0C0032087C = {
@@ -376,10 +398,12 @@
 				A8C72340296724EC0032087C /* URLSessionHTTPClient.swift in Sources */,
 				A8C7231229671D0C0032087C /* EsayNews.xcdatamodeld in Sources */,
 				A8C72373296B4A740032087C /* Article.swift in Sources */,
+				A84B38B92980482200612343 /* CoreDataHelpers.swift in Sources */,
 				A8C72371296B46A60032087C /* ArticleLoader.swift in Sources */,
 				A8138B4429803AC500A24E4F /* ArticleStore.xcdatamodeld in Sources */,
 				A8C7233E296723890032087C /* HTTPClient.swift in Sources */,
 				A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */,
+				A84B38B7298047B900612343 /* CoreDataArticleStore.swift in Sources */,
 				A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */,
 				A8C72350296B25600032087C /* ArticleItemsMapper.swift in Sources */,
 			);

@@ -18,3 +18,4 @@ class ManagedArticle: NSManagedObject {
     @NSManaged var published_at: Date
 }
 
+
