@@ -21,9 +21,27 @@ class ManagedArticle: NSManagedObject {
 }
 
 extension ManagedArticle {
-    static func find(in context: NSManagedObjectContext) throws -> ManagedCache? {
-        let request = NSFetchRequest<ManagedCache>(entityName: entity().name!)
-        request.returnsObjectsAsFaults = false
-        return try context.fetch(request).first
+    static func items(from localArticle: [LocalArticle], in context: NSManagedObjectContext) -> NSOrderedSet {
+        return NSOrderedSet(array: localArticle.map({ local in
+            let managed = ManagedArticle(context: context)
+            managed.author = local.author
+            managed.title = local.title
+            managed.desc = local.description
+            managed.url = local.url
+            managed.source = local.source
+            managed.image = local.image
+            managed.published_at = local.published_at
+            return
+        }))
+    }
+    
+    var local: LocalArticle {
+        return LocalArticle(author: author,
+                            title: title,
+                            description: description,
+                            url: url,
+                            source: source,
+                            image: image,
+                            published_at: published_at)
     }
 }
