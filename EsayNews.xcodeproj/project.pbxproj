@@ -14,6 +14,8 @@
 		A84B38BE2980723700612343 /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B38BD2980723700612343 /* ManagedCache.swift */; };
 		A8B252D8298147160037B1D4 /* LocalArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B252D7298147160037B1D4 /* LocalArticle.swift */; };
 		A8B252DA2981549A0037B1D4 /* ArticleCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B252D92981549A0037B1D4 /* ArticleCachePolicy.swift */; };
+		A8B252E42982C31F0037B1D4 /* ArticleStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B252E32982C31F0037B1D4 /* ArticleStoreSpy.swift */; };
+		A8B252E62982C5650037B1D4 /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B252E52982C5650037B1D4 /* ArticleStore.swift */; };
 		A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230729671D0C0032087C /* AppDelegate.swift */; };
 		A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230929671D0C0032087C /* SceneDelegate.swift */; };
 		A8C7230F29671D0C0032087C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7230D29671D0C0032087C /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		A84B38BD2980723700612343 /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		A8B252D7298147160037B1D4 /* LocalArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArticle.swift; sourceTree = "<group>"; };
 		A8B252D92981549A0037B1D4 /* ArticleCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCachePolicy.swift; sourceTree = "<group>"; };
+		A8B252E32982C31F0037B1D4 /* ArticleStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStoreSpy.swift; sourceTree = "<group>"; };
+		A8B252E52982C5650037B1D4 /* ArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
 		A8C7230429671D0C0032087C /* EsayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C7230729671D0C0032087C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C7230929671D0C0032087C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				A84B38BB298054D000612343 /* CoreData */,
 				A8B252D7298147160037B1D4 /* LocalArticle.swift */,
 				A8B252D92981549A0037B1D4 /* ArticleCachePolicy.swift */,
+				A8B252E52982C5650037B1D4 /* ArticleStore.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -141,8 +146,17 @@
 		A84B38BC29805A6D00612343 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
+				A8B252E22982C3130037B1D4 /* Helpers */,
 			);
 			path = "Feed Cache";
+			sourceTree = "<group>";
+		};
+		A8B252E22982C3130037B1D4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A8B252E32982C31F0037B1D4 /* ArticleStoreSpy.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A8C722FB29671D0C0032087C = {
@@ -417,6 +431,7 @@
 				A8C72340296724EC0032087C /* URLSessionHTTPClient.swift in Sources */,
 				A8C7231229671D0C0032087C /* EsayNews.xcdatamodeld in Sources */,
 				A8C72373296B4A740032087C /* Article.swift in Sources */,
+				A8B252E62982C5650037B1D4 /* ArticleStore.swift in Sources */,
 				A84B38B92980482200612343 /* CoreDataHelpers.swift in Sources */,
 				A8C72371296B46A60032087C /* ArticleLoader.swift in Sources */,
 				A8138B4429803AC500A24E4F /* ArticleStore.xcdatamodeld in Sources */,
@@ -436,6 +451,7 @@
 				A8C7234829672F360032087C /* URLSessionHTTPClientTests.swift in Sources */,
 				A8C7234429672A600032087C /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				A8C7234A296733160032087C /* SharedTestHelpers.swift in Sources */,
+				A8B252E42982C31F0037B1D4 /* ArticleStoreSpy.swift in Sources */,
 				A8C7234D296734D40032087C /* URLProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
