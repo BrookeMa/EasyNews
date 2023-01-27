@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A8C7230329671D0C0032087C"
-               BuildableName = "EsayNews.app"
-               BlueprintName = "EsayNews"
-               ReferencedContainer = "container:EsayNews.xcodeproj">
+               BuildableName = "EasyNews.app"
+               BlueprintName = "EasyNews"
+               ReferencedContainer = "container:EasyNews.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,18 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A8C7230329671D0C0032087C"
-            BuildableName = "EsayNews.app"
-            BlueprintName = "EsayNews"
-            ReferencedContainer = "container:EsayNews.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -45,9 +34,20 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A8C7231C29671D0E0032087C"
-               BuildableName = "EsayNewsTests.xctest"
-               BlueprintName = "EsayNewsTests"
-               ReferencedContainer = "container:EsayNews.xcodeproj">
+               BuildableName = "EasyNewsTests.xctest"
+               BlueprintName = "EasyNewsTests"
+               ReferencedContainer = "container:EasyNews.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A8C7232629671D0E0032087C"
+               BuildableName = "EasyNewsUITests.xctest"
+               BlueprintName = "EasyNewsUITests"
+               ReferencedContainer = "container:EasyNews.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -67,9 +67,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A8C7230329671D0C0032087C"
-            BuildableName = "EsayNews.app"
-            BlueprintName = "EsayNews"
-            ReferencedContainer = "container:EsayNews.xcodeproj">
+            BuildableName = "EasyNews.app"
+            BlueprintName = "EasyNews"
+            ReferencedContainer = "container:EasyNews.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A8C7230329671D0C0032087C"
-            BuildableName = "EsayNews.app"
-            BlueprintName = "EsayNews"
-            ReferencedContainer = "container:EsayNews.xcodeproj">
+            BuildableName = "EasyNews.app"
+            BlueprintName = "EasyNews"
+            ReferencedContainer = "container:EasyNews.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

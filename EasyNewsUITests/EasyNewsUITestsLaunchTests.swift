@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class EsayNewsUITestsLaunchTests: XCTestCase {
+final class EasyNewsUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

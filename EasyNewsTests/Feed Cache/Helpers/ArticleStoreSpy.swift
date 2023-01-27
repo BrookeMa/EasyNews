@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import EsayNews
+import EasyNews
 
 class ArticleStoreSpy: ArticleStore {
     enum ReceivedMessage: Equatable {

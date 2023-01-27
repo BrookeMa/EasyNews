@@ -19,11 +19,11 @@
 		A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230729671D0C0032087C /* AppDelegate.swift */; };
 		A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230929671D0C0032087C /* SceneDelegate.swift */; };
 		A8C7230F29671D0C0032087C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7230D29671D0C0032087C /* Main.storyboard */; };
-		A8C7231229671D0C0032087C /* EsayNews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8C7231029671D0C0032087C /* EsayNews.xcdatamodeld */; };
+		A8C7231229671D0C0032087C /* EasyNews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8C7231029671D0C0032087C /* EasyNews.xcdatamodeld */; };
 		A8C7231429671D0D0032087C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C7231329671D0D0032087C /* Assets.xcassets */; };
 		A8C7231729671D0D0032087C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7231529671D0D0032087C /* LaunchScreen.storyboard */; };
-		A8C7232C29671D0E0032087C /* EsayNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7232B29671D0E0032087C /* EsayNewsUITests.swift */; };
-		A8C7232E29671D0E0032087C /* EsayNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7232D29671D0E0032087C /* EsayNewsUITestsLaunchTests.swift */; };
+		A8C7232C29671D0E0032087C /* EasyNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7232B29671D0E0032087C /* EasyNewsUITests.swift */; };
+		A8C7232E29671D0E0032087C /* EasyNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7232D29671D0E0032087C /* EasyNewsUITestsLaunchTests.swift */; };
 		A8C7233E296723890032087C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7233D296723890032087C /* HTTPClient.swift */; };
 		A8C72340296724EC0032087C /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7233F296724EC0032087C /* URLSessionHTTPClient.swift */; };
 		A8C7234429672A600032087C /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7234329672A600032087C /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -63,7 +63,7 @@
 		A8B252D92981549A0037B1D4 /* ArticleCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCachePolicy.swift; sourceTree = "<group>"; };
 		A8B252E32982C31F0037B1D4 /* ArticleStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStoreSpy.swift; sourceTree = "<group>"; };
 		A8B252E52982C5650037B1D4 /* ArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
-		A8C7230429671D0C0032087C /* EsayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C7230429671D0C0032087C /* EasyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C7230729671D0C0032087C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C7230929671D0C0032087C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A8C7230E29671D0C0032087C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,10 +71,10 @@
 		A8C7231329671D0D0032087C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C7231629671D0D0032087C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8C7231829671D0D0032087C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8C7231D29671D0E0032087C /* EsayNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EsayNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8C7232729671D0E0032087C /* EsayNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EsayNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8C7232B29671D0E0032087C /* EsayNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsayNewsUITests.swift; sourceTree = "<group>"; };
-		A8C7232D29671D0E0032087C /* EsayNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsayNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A8C7231D29671D0E0032087C /* EasyNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C7232729671D0E0032087C /* EasyNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C7232B29671D0E0032087C /* EasyNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyNewsUITests.swift; sourceTree = "<group>"; };
+		A8C7232D29671D0E0032087C /* EasyNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A8C7233D296723890032087C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		A8C7233F296724EC0032087C /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		A8C7234329672A600032087C /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
@@ -162,9 +162,9 @@
 		A8C722FB29671D0C0032087C = {
 			isa = PBXGroup;
 			children = (
-				A8C7230629671D0C0032087C /* EsayNews */,
-				A8C7232029671D0E0032087C /* EsayNewsTests */,
-				A8C7232A29671D0E0032087C /* EsayNewsUITests */,
+				A8C7230629671D0C0032087C /* EasyNews */,
+				A8C7232029671D0E0032087C /* EasyNewsTests */,
+				A8C7232A29671D0E0032087C /* EasyNewsUITests */,
 				A8C7230529671D0C0032087C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -172,14 +172,14 @@
 		A8C7230529671D0C0032087C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A8C7230429671D0C0032087C /* EsayNews.app */,
-				A8C7231D29671D0E0032087C /* EsayNewsTests.xctest */,
-				A8C7232729671D0E0032087C /* EsayNewsUITests.xctest */,
+				A8C7230429671D0C0032087C /* EasyNews.app */,
+				A8C7231D29671D0E0032087C /* EasyNewsTests.xctest */,
+				A8C7232729671D0E0032087C /* EasyNewsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A8C7230629671D0C0032087C /* EsayNews */ = {
+		A8C7230629671D0C0032087C /* EasyNews */ = {
 			isa = PBXGroup;
 			children = (
 				A8138B3C29802A8600A24E4F /* Article Cache */,
@@ -193,12 +193,12 @@
 				A8C7231329671D0D0032087C /* Assets.xcassets */,
 				A8C7231529671D0D0032087C /* LaunchScreen.storyboard */,
 				A8C7231829671D0D0032087C /* Info.plist */,
-				A8C7231029671D0C0032087C /* EsayNews.xcdatamodeld */,
+				A8C7231029671D0C0032087C /* EasyNews.xcdatamodeld */,
 			);
-			path = EsayNews;
+			path = EasyNews;
 			sourceTree = "<group>";
 		};
-		A8C7232029671D0E0032087C /* EsayNewsTests */ = {
+		A8C7232029671D0E0032087C /* EasyNewsTests */ = {
 			isa = PBXGroup;
 			children = (
 				A84B38BC29805A6D00612343 /* Feed Cache */,
@@ -206,16 +206,16 @@
 				A8C72342296729FC0032087C /* Article API */,
 				A8C72341296729E40032087C /* Helpers */,
 			);
-			path = EsayNewsTests;
+			path = EasyNewsTests;
 			sourceTree = "<group>";
 		};
-		A8C7232A29671D0E0032087C /* EsayNewsUITests */ = {
+		A8C7232A29671D0E0032087C /* EasyNewsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A8C7232B29671D0E0032087C /* EsayNewsUITests.swift */,
-				A8C7232D29671D0E0032087C /* EsayNewsUITestsLaunchTests.swift */,
+				A8C7232B29671D0E0032087C /* EasyNewsUITests.swift */,
+				A8C7232D29671D0E0032087C /* EasyNewsUITestsLaunchTests.swift */,
 			);
-			path = EsayNewsUITests;
+			path = EasyNewsUITests;
 			sourceTree = "<group>";
 		};
 		A8C7233A296720690032087C /* Article API */ = {
@@ -296,9 +296,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A8C7230329671D0C0032087C /* EsayNews */ = {
+		A8C7230329671D0C0032087C /* EasyNews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8C7233129671D0E0032087C /* Build configuration list for PBXNativeTarget "EsayNews" */;
+			buildConfigurationList = A8C7233129671D0E0032087C /* Build configuration list for PBXNativeTarget "EasyNews" */;
 			buildPhases = (
 				A8C7230029671D0C0032087C /* Sources */,
 				A8C7230129671D0C0032087C /* Frameworks */,
@@ -308,14 +308,14 @@
 			);
 			dependencies = (
 			);
-			name = EsayNews;
+			name = EasyNews;
 			productName = EsayNews;
-			productReference = A8C7230429671D0C0032087C /* EsayNews.app */;
+			productReference = A8C7230429671D0C0032087C /* EasyNews.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A8C7231C29671D0E0032087C /* EsayNewsTests */ = {
+		A8C7231C29671D0E0032087C /* EasyNewsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8C7233429671D0E0032087C /* Build configuration list for PBXNativeTarget "EsayNewsTests" */;
+			buildConfigurationList = A8C7233429671D0E0032087C /* Build configuration list for PBXNativeTarget "EasyNewsTests" */;
 			buildPhases = (
 				A8C7231929671D0E0032087C /* Sources */,
 				A8C7231A29671D0E0032087C /* Frameworks */,
@@ -326,14 +326,14 @@
 			dependencies = (
 				A8C7231F29671D0E0032087C /* PBXTargetDependency */,
 			);
-			name = EsayNewsTests;
+			name = EasyNewsTests;
 			productName = EsayNewsTests;
-			productReference = A8C7231D29671D0E0032087C /* EsayNewsTests.xctest */;
+			productReference = A8C7231D29671D0E0032087C /* EasyNewsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A8C7232629671D0E0032087C /* EsayNewsUITests */ = {
+		A8C7232629671D0E0032087C /* EasyNewsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8C7233729671D0E0032087C /* Build configuration list for PBXNativeTarget "EsayNewsUITests" */;
+			buildConfigurationList = A8C7233729671D0E0032087C /* Build configuration list for PBXNativeTarget "EasyNewsUITests" */;
 			buildPhases = (
 				A8C7232329671D0E0032087C /* Sources */,
 				A8C7232429671D0E0032087C /* Frameworks */,
@@ -344,9 +344,9 @@
 			dependencies = (
 				A8C7232929671D0E0032087C /* PBXTargetDependency */,
 			);
-			name = EsayNewsUITests;
+			name = EasyNewsUITests;
 			productName = EsayNewsUITests;
-			productReference = A8C7232729671D0E0032087C /* EsayNewsUITests.xctest */;
+			productReference = A8C7232729671D0E0032087C /* EasyNewsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -372,7 +372,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A8C722FF29671D0C0032087C /* Build configuration list for PBXProject "EsayNews" */;
+			buildConfigurationList = A8C722FF29671D0C0032087C /* Build configuration list for PBXProject "EasyNews" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -385,9 +385,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A8C7230329671D0C0032087C /* EsayNews */,
-				A8C7231C29671D0E0032087C /* EsayNewsTests */,
-				A8C7232629671D0E0032087C /* EsayNewsUITests */,
+				A8C7230329671D0C0032087C /* EasyNews */,
+				A8C7231C29671D0E0032087C /* EasyNewsTests */,
+				A8C7232629671D0E0032087C /* EasyNewsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -429,7 +429,7 @@
 				A8C72375296B54180032087C /* HTTPURLResponse+StatusCode.swift in Sources */,
 				A84B38BE2980723700612343 /* ManagedCache.swift in Sources */,
 				A8C72340296724EC0032087C /* URLSessionHTTPClient.swift in Sources */,
-				A8C7231229671D0C0032087C /* EsayNews.xcdatamodeld in Sources */,
+				A8C7231229671D0C0032087C /* EasyNews.xcdatamodeld in Sources */,
 				A8C72373296B4A740032087C /* Article.swift in Sources */,
 				A8B252E62982C5650037B1D4 /* ArticleStore.swift in Sources */,
 				A84B38B92980482200612343 /* CoreDataHelpers.swift in Sources */,
@@ -460,8 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8C7232E29671D0E0032087C /* EsayNewsUITestsLaunchTests.swift in Sources */,
-				A8C7232C29671D0E0032087C /* EsayNewsUITests.swift in Sources */,
+				A8C7232E29671D0E0032087C /* EasyNewsUITestsLaunchTests.swift in Sources */,
+				A8C7232C29671D0E0032087C /* EasyNewsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,12 +470,12 @@
 /* Begin PBXTargetDependency section */
 		A8C7231F29671D0E0032087C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A8C7230329671D0C0032087C /* EsayNews */;
+			target = A8C7230329671D0C0032087C /* EasyNews */;
 			targetProxy = A8C7231E29671D0E0032087C /* PBXContainerItemProxy */;
 		};
 		A8C7232929671D0E0032087C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A8C7230329671D0C0032087C /* EsayNews */;
+			target = A8C7230329671D0C0032087C /* EasyNews */;
 			targetProxy = A8C7232829671D0E0032087C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -623,7 +623,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LYFS9UP88S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EsayNews/Info.plist;
+				INFOPLIST_FILE = EasyNews/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -651,7 +651,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LYFS9UP88S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EsayNews/Info.plist;
+				INFOPLIST_FILE = EasyNews/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -686,7 +686,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EsayNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EsayNews";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EasyNews";
 			};
 			name = Debug;
 		};
@@ -706,7 +706,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EsayNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EsayNews";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EasyNews";
 			};
 			name = Release;
 		};
@@ -749,7 +749,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A8C722FF29671D0C0032087C /* Build configuration list for PBXProject "EsayNews" */ = {
+		A8C722FF29671D0C0032087C /* Build configuration list for PBXProject "EasyNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A8C7232F29671D0E0032087C /* Debug */,
@@ -758,7 +758,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8C7233129671D0E0032087C /* Build configuration list for PBXNativeTarget "EsayNews" */ = {
+		A8C7233129671D0E0032087C /* Build configuration list for PBXNativeTarget "EasyNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A8C7233229671D0E0032087C /* Debug */,
@@ -767,7 +767,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8C7233429671D0E0032087C /* Build configuration list for PBXNativeTarget "EsayNewsTests" */ = {
+		A8C7233429671D0E0032087C /* Build configuration list for PBXNativeTarget "EasyNewsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A8C7233529671D0E0032087C /* Debug */,
@@ -776,7 +776,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8C7233729671D0E0032087C /* Build configuration list for PBXNativeTarget "EsayNewsUITests" */ = {
+		A8C7233729671D0E0032087C /* Build configuration list for PBXNativeTarget "EasyNewsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A8C7233829671D0E0032087C /* Debug */,
@@ -798,13 +798,13 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		A8C7231029671D0C0032087C /* EsayNews.xcdatamodeld */ = {
+		A8C7231029671D0C0032087C /* EasyNews.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				A8C7231129671D0C0032087C /* EsayNews.xcdatamodel */,
 			);
 			currentVersion = A8C7231129671D0C0032087C /* EsayNews.xcdatamodel */;
-			path = EsayNews.xcdatamodeld;
+			path = EasyNews.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

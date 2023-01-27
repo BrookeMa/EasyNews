@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import EsayNews
+import EasyNews
 
 final class URLSessionHTTPClientTests: XCTestCase {
 
