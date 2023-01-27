@@ -1,6 +1,6 @@
 //
 //  XCTestCase+MemoryLeakTracking.swift
-//  EsayNewsTests
+//  EasyNewsTests
 //
 //  Created by Ye Ma on 05/01/2023.
 //

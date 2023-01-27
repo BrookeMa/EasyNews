@@ -1,6 +1,6 @@
 //
-//  EsayNewsUITests.swift
-//  EsayNewsUITests
+//  EasyNewsUITests.swift
+//  EasyNewsUITests
 //
 //  Created by Ye Ma on 05/01/2023.
 //

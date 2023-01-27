@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  EsayNews
+//  EasyNews
 //
 //  Created by Ye Ma on 05/01/2023.
 //

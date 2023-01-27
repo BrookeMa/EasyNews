@@ -1,6 +1,6 @@
 //
 //  CoreDataHelpers.swift
-//  EsayNews
+//  EasyNews
 //
 //  Created by Ye Ma on 24/01/2023.
 //

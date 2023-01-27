@@ -1,6 +1,6 @@
 //
 //  ArticleStoreSpy.swift
-//  EsayNewsTests
+//  EasyNewsTests
 //
 //  Created by Ye Ma on 26/01/2023.
 //
@@ -34,7 +34,7 @@ class ArticleStoreSpy: ArticleStore {
         deletionCompletions[index](.success(()))
     }
     
-    func insert(_ articles: [EsayNews.LocalArticle], timestamp: Date, completion: @escaping InsertionCompletion) {
+    func insert(_ articles: [EasyNews.LocalArticle], timestamp: Date, completion: @escaping InsertionCompletion) {
         insertionCompletions.append(completion)
         receivedMessages.append(.insert(articles, timestamp))
     }
