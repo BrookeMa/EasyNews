@@ -7,22 +7,22 @@
 
 import Foundation
 
-public struct Article: Hashable {
-    let author: String?
-    let title: String
-    let description: String
-    let url: URL
-    let source: String
-    let image: URL?
-    let published_at: Date
+public struct Article: Equatable {
+    public let author: String?
+    public let title: String
+    public let description: String
+    public let url: URL
+    public let source: String
+    public let image: URL?
+    public let published: Date
     
-    init(author: String?, title: String, description: String, url: URL, source: String, image: URL?, published_at: Date) {
+    public init(author: String?, title: String, description: String, url: URL, source: String, image: URL?, published: Date) {
         self.author = author
         self.title = title
         self.description = description
         self.url = url
         self.source = source
         self.image = image
-        self.published_at = published_at
+        self.published = published
     }
 }
