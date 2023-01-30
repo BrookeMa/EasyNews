@@ -15,14 +15,13 @@ class ManagedArticle: NSManagedObject {
     @NSManaged var url: URL
     @NSManaged var source: String
     @NSManaged var image: URL?
-    @NSManaged var published_at: Date
-    
-    @NSManaged var cache: NSOrderedSet
+    @NSManaged var published: Date
+    @NSManaged var cache: ManagedCache
 }
 
 extension ManagedArticle {
-    static func items(from localArticle: [LocalArticle], in context: NSManagedObjectContext) -> NSOrderedSet {
-        return NSOrderedSet(array: localArticle.map({ local in
+    static func items(from localArticles: [LocalArticle], in context: NSManagedObjectContext) -> NSOrderedSet {
+        return NSOrderedSet(array: localArticles.map { local in
             let managed = ManagedArticle(context: context)
             managed.author = local.author
             managed.title = local.title
@@ -30,18 +29,18 @@ extension ManagedArticle {
             managed.url = local.url
             managed.source = local.source
             managed.image = local.image
-            managed.published_at = local.published_at
-            return
-        }))
+            managed.published = local.published
+            return managed
+        })
     }
     
     var local: LocalArticle {
         return LocalArticle(author: author,
                             title: title,
-                            description: description,
+                            description: desc,
                             url: url,
                             source: source,
                             image: image,
-                            published_at: published_at)
+                            published: published)
     }
 }

@@ -37,7 +37,7 @@ final class ArticleItemsMapper {
                              url: $0.url,
                              source: $0.source,
                              image: $0.image,
-                             published_at: $0.published_at) }
+                             published: $0.published_at) }
         }
     }
     
