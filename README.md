@@ -16,5 +16,7 @@ The project is not currently complete yet,
 | nil         | HTTPURLResponse | value | invalid |
 | value       | URLResponse     | value | invalid |
 | value       | HTTPURLResponse | value | invalid |
-| value       | URLResponse     | value | valid   |
-| nil         | HTTPURLResponse | value | valid   |
+| value       | URLResponse     | nil   | invalid |
+| nil         | HTTPURLResponse | nil   | valid   |
+| nil         | nil             | value | valid   |
+
