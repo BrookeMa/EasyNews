@@ -16,6 +16,14 @@ class CacheArticlesUseCaseTests: XCTestCase {
         XCTAssertEqual(store.receivedMessages, [])
     }
     
+    func test_save_requestsCacheDeletion() {
+        let (sut, store) = makeSUT()
+        
+        sut.save(uniqueArticleItem().model) { _ in }
+        
+        XCTAssertEqual(store.receivedMessages, [.deleteCachedArticle])
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #filePath, line: UInt = #line) -> (sut: LocalArticlesLoader, store: ArticleStoreSpy) {
