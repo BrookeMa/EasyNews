@@ -34,6 +34,17 @@ class CacheArticlesUseCaseTests: XCTestCase {
         XCTAssertEqual(store.receivedMessages, [.deleteCachedArticle])
     }
     
+    func test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulDeletion() {
+        let timestamp = Date()
+        let articles = uniqueArticleItem()
+        let (sut, store) = makeSUT(currentDate: { timestamp })
+        
+        sut.save(articles.model) { _ in }
+        store.completeDeletionSuccessfully()
+
+        XCTAssertEqual(store.receivedMessages, [.deleteCachedArticle, .insert(articles.local, timestamp)])
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #filePath, line: UInt = #line) -> (sut: LocalArticlesLoader, store: ArticleStoreSpy) {
