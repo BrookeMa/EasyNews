@@ -19,7 +19,7 @@ class CacheArticlesUseCaseTests: XCTestCase {
     func test_save_requestsCacheDeletion() {
         let (sut, store) = makeSUT()
         
-        sut.save(uniqueArticleItem().model) { _ in }
+        sut.save(uniqueArticleItem().models) { _ in }
         
         XCTAssertEqual(store.receivedMessages, [.deleteCachedArticle])
     }
@@ -28,7 +28,7 @@ class CacheArticlesUseCaseTests: XCTestCase {
         let (sut, store) = makeSUT()
         let deletionError = anyNSError()
         
-        sut.save(uniqueArticleItem().model) { _ in }
+        sut.save(uniqueArticleItem().models) { _ in }
         store.completeDeletion(with: deletionError)
         
         XCTAssertEqual(store.receivedMessages, [.deleteCachedArticle])
@@ -39,10 +39,19 @@ class CacheArticlesUseCaseTests: XCTestCase {
         let articles = uniqueArticleItem()
         let (sut, store) = makeSUT(currentDate: { timestamp })
         
-        sut.save(articles.model) { _ in }
+        sut.save(articles.models) { _ in }
         store.completeDeletionSuccessfully()
 
         XCTAssertEqual(store.receivedMessages, [.deleteCachedArticle, .insert(articles.local, timestamp)])
+    }
+    
+    func test_save_failsOnDeletionError() {
+        let (sut, store) = makeSUT()
+        let deletionError = anyNSError()
+        
+        expect(sut, toCompleteWithError: deletionError) {
+            store.completeDeletion(with: deletionError)
+        }
     }
     
     // MARK: - Helpers
@@ -54,5 +63,20 @@ class CacheArticlesUseCaseTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         
         return (sut, store)
+    }
+    
+    private func expect(_ sut: LocalArticlesLoader, toCompleteWithError expectedError: NSError?, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+        let exp = expectation(description: "Wait for save completion")
+        
+        var receivedError: Error?
+        sut.save(uniqueArticleItem().models) { result in
+            if case let Result.failure(error) = result { receivedError = error }
+            exp.fulfill()
+        }
+        
+        action()
+        wait(for: [exp], timeout: 1.0)
+        
+        XCTAssertEqual(receivedError as NSError?, expectedError, file: file, line: line)
     }
 }

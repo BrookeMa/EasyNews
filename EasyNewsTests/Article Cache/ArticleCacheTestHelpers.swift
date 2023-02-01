@@ -12,7 +12,7 @@ func uniqueArticle() -> Article {
     return Article(author: "any", title: "any", description: "description \(UUID())", url: anyURL(), source: "any", image: anyURL(), published: Date())
 }
 
-func uniqueArticleItem() -> (model: [Article], local: [LocalArticle]) {
+func uniqueArticleItem() -> (models: [Article], local: [LocalArticle]) {
     let models = [uniqueArticle(), uniqueArticle()]
     let local = models.map { LocalArticle(author: $0.author,
                                           title: $0.title,
