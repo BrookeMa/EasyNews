@@ -24,6 +24,16 @@ class CacheArticlesUseCaseTests: XCTestCase {
         XCTAssertEqual(store.receivedMessages, [.deleteCachedArticle])
     }
     
+    func test_save_doesNotRequestsCacheInsertionOnDeletionError() {
+        let (sut, store) = makeSUT()
+        let deletionError = anyNSError()
+        
+        sut.save(uniqueArticleItem().model) { _ in }
+        store.completeDeletion(with: deletionError)
+        
+        XCTAssertEqual(store.receivedMessages, [.deleteCachedArticle])
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #filePath, line: UInt = #line) -> (sut: LocalArticlesLoader, store: ArticleStoreSpy) {
