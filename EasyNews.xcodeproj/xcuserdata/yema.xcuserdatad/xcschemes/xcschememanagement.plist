@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>EasyNewsiOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>EsayNews.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A89CEC3E298C13B800B3D02B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A89CEC56298C13B900B3D02B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A89CEC60298C13B900B3D02B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A8C7230329671D0C0032087C</key>
 		<dict>
 			<key>primary</key>
