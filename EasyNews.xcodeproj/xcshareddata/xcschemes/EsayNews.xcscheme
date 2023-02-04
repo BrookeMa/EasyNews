@@ -50,6 +50,28 @@
                ReferencedContainer = "container:EasyNews.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A8EEA310298D688D00BCC6A9"
+               BuildableName = "EasyNewsCacheAndAPITests.xctest"
+               BlueprintName = "EasyNewsCacheAndAPITests"
+               ReferencedContainer = "container:EasyNews.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A8EEA3B2298D97FE00BCC6A9"
+               BuildableName = "EasyNewsFeatureTests.xctest"
+               BlueprintName = "EasyNewsFeatureTests"
+               ReferencedContainer = "container:EasyNews.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

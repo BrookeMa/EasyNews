@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import EasyNews
+import EasyNewsFeature
 
 class ArticleStoreSpy: ArticleStore {
     enum ReceivedMessage: Equatable {
@@ -34,7 +34,7 @@ class ArticleStoreSpy: ArticleStore {
         deletionCompletions[index](.success(()))
     }
     
-    func insert(_ articles: [EasyNews.LocalArticle], timestamp: Date, completion: @escaping InsertionCompletion) {
+    func insert(_ articles: [LocalArticle], timestamp: Date, completion: @escaping InsertionCompletion) {
         insertionCompletions.append(completion)
         receivedMessages.append(.insert(articles, timestamp))
     }

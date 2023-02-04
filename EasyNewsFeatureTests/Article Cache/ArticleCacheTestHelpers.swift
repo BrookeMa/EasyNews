@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import EasyNews
+import EasyNewsFeature
 
 func uniqueArticle() -> Article {
     return Article(author: "any", title: "any", description: "description \(UUID())", url: anyURL(), source: "any", image: anyURL(), published: Date())

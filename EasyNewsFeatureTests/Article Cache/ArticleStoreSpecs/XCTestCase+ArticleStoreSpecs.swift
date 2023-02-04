@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import EasyNews
+import EasyNewsFeature
 
 extension ArticleStoreSpecs where Self: XCTestCase {
     
