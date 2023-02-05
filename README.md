@@ -1,8 +1,8 @@
 # Overview
 
-A news app to show my coding skills to recruiters, including Core Data, network, image cache, unit tests, MVVM e.g. 
+A news app to show my coding skills, including Core Data, network, image cache, unit tests, MVVM e.g. 
 
-The project is not currently complete yet, 
+The project is not currently complete yet. Meanwhile, review iOS development and recent learning. Due to I am looking for a job, may be finished later
 
 # TDD
 ## Network
