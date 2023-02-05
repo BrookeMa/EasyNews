@@ -1,0 +1,9 @@
+/* 
+  TopHeadline.strings
+  EasyNews
+
+  Created by Ye Ma on 05/02/2023.
+  
+*/
+
+"TOPHEADLINE_VIEW_CONNECTION_ERROR" = "Couldn't connect to server";
