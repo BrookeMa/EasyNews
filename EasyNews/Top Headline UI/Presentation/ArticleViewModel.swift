@@ -6,9 +6,49 @@
 //
 
 import Foundation
+import EasyNewsFeature
 
-final class ArticleViewModel {
+final class ArticleViewModel<Image> {
     typealias Observer<T> = (T) -> Void
     
+    private var task: ImageDataLoaderTask?
+    private let model: Article
+    private let imageTransformer: (Data) -> Image?
+    private let imageLoader: ImageDataLoader
     
+    init(model: Article, imageTransformer: @escaping (Data) -> Image?, imageLoader: ImageDataLoader) {
+        self.model = model
+        self.imageTransformer = imageTransformer
+        self.imageLoader = imageLoader
+    }
+    
+    var author: String? {
+        return model.author
+    }
+    
+    var description: String? {
+        return model.description
+    }
+    
+    var onImageLoad: Observer<Image>?
+    var onImageLoadingStateChange: Observer<Bool>?
+    
+    func loadImageData() {
+        onImageLoadingStateChange?(true)
+        task = imageLoader.loadImageData(from: model.url) { [weak self] result in
+            self?.handle(result)
+        }
+    }
+    
+    private func handle(_ result: ImageDataLoader.Result) {
+        if let image = (try? result.get()).flatMap(imageTransformer) {
+            onImageLoad?(image)
+        }
+        onImageLoadingStateChange?(false)
+    }
+    
+    func cancelImageDataLoad() {
+        task?.cancel()
+        task = nil
+    }
 }

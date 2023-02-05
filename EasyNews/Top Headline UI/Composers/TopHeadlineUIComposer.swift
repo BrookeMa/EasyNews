@@ -11,8 +11,14 @@ import EasyNewsFeature
 public final class TopHeadlineUIComposer {
     private init() {}
     
-    public static func topHeadlineComposedWith(articleLoader: ArticleLoader) {
+    public static func topHeadlineComposedWith(articleLoader: ArticleLoader) -> TopHeadlineViewController {
+        let topHeadlineViewModel = TopHeadlineViewModel(articleLoader: articleLoader)
         
+        let topHeadlineController = TopHeadlineViewController.makeWith(viewModel: topHeadlineViewModel)
+        
+        
+        
+        return topHeadlineController
     }
 }
 
