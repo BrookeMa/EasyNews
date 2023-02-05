@@ -9,7 +9,7 @@ import UIKit
 
 final class TopHeadlineViewController: UICollectionViewController {
     
-    var viewModel: TopHeadlineViewMode? {
+    var viewModel: TopHeadlineViewModel? {
         didSet {
             bind()
         }
@@ -17,6 +17,15 @@ final class TopHeadlineViewController: UICollectionViewController {
     
     func bind() {
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        refresh()
+    }
+    
+    private func refresh() {
+        viewModel?.loadArticles()
     }
 }
 

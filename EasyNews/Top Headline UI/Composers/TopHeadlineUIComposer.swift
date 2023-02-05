@@ -17,7 +17,7 @@ public final class TopHeadlineUIComposer {
 }
 
 private extension TopHeadlineViewController {
-    static func makeWith(viewModel: TopHeadlineViewMode) -> TopHeadlineViewController {
+    static func makeWith(viewModel: TopHeadlineViewModel) -> TopHeadlineViewController {
         let bundle = Bundle(for: TopHeadlineViewController.self)
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
         let viewController = storyboard.instantiateInitialViewController() as! TopHeadlineViewController
