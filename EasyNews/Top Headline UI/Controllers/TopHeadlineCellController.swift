@@ -19,6 +19,7 @@ final class TopHeadlineCellController {
         let cell = binded(collectionView.dequeueResuableCell(for: indexPath))
         
         
+        
         return cell
     }
     

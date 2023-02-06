@@ -11,14 +11,22 @@ import EasyNewsFeature
 public final class TopHeadlineUIComposer {
     private init() {}
     
-    public static func topHeadlineComposedWith(articleLoader: ArticleLoader) -> TopHeadlineViewController {
+    public static func topHeadlineComposedWith(articleLoader: ArticleLoader, imageLoader: ImageDataLoader) -> TopHeadlineViewController {
         let topHeadlineViewModel = TopHeadlineViewModel(articleLoader: articleLoader)
         
         let topHeadlineController = TopHeadlineViewController.makeWith(viewModel: topHeadlineViewModel)
         
-        
+        topHeadlineViewModel.onArticlesLoad = adaptArticleToCellControllers(forwardingTo: topHeadlineController, imageLoader: imageLoader)
         
         return topHeadlineController
+    }
+    
+    private static func adaptArticleToCellControllers(forwardingTo controller: TopHeadlineViewController, imageLoader: ImageDataLoader) -> ([Article]) -> Void {
+        return { [weak controller] article in
+            controller?.collectionModel = article.map { model in
+                TopHeadlineCellController(viewModel: ArticleViewModel(model: model, imageTransformer: UIImage.init, imageLoader: imageLoader))
+            }
+        }
     }
 }
 
