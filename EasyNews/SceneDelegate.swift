@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EasyNewsFeature
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,6 +18,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let url = URL(string: "http://api.mediastack.com/v1/news?access_key=156c6050681184c295e5415ed6c9c438&keywords=apple")!
+        
+        let session = URLSession(configuration: .ephemeral)
+        let client = URLSessionHTTPClient(session: session)
+        let remoteArticleLoader = RemoteArticleLoader(url: url, client: client)
+        let remoteImageLoader = RemoteImageDataLoader(client: client)
+        
+        let topHeadlineViewController = TopHeadlineUIComposer.topHeadlineComposedWith(articleLoader: remoteArticleLoader, imageLoader: remoteImageLoader)
+        
+        window?.rootViewController = topHeadlineViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

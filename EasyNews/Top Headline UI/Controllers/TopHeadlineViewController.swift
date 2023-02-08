@@ -11,6 +11,9 @@ public final class TopHeadlineViewController: UICollectionViewController {
     
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
+       
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        self.collectionView.addSubview(refreshControl)
         
         return refreshControl
     } ()
@@ -40,8 +43,15 @@ public final class TopHeadlineViewController: UICollectionViewController {
         refresh()
     }
     
-    private func refresh() {
+    @objc private func refresh() {
         viewModel?.loadArticles()
+    }
+    
+    public override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            return TopHeadlineHeaderView()
+        }
+        return UICollectionReusableView()
     }
     
     public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -54,6 +64,10 @@ public final class TopHeadlineViewController: UICollectionViewController {
     
     private func cellController(forRowAt indexPath: IndexPath) -> TopHeadlineCellController {
         return collectionModel[indexPath.row]
+    }
+    
+    private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
+        cellController(forRowAt: indexPath).cancelLoad()
     }
 }
 

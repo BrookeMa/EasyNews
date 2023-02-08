@@ -18,9 +18,17 @@ final class TopHeadlineCellController {
     func view(in collectionView: UICollectionView, cellForRowAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = binded(collectionView.dequeueResuableCell(for: indexPath))
         
-        
-        
+        viewModel.loadImageData()
         return cell
+    }
+    
+    func preload() {
+        viewModel.loadImageData()
+    }
+    
+    func cancelLoad() {
+        releaseCellForReuse()
+        viewModel.cancelImageDataLoad()
     }
     
     private func binded(_ cell: TopHeadlineCollectionViewCell) -> UICollectionViewCell {

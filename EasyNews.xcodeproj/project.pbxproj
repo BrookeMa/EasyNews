@@ -10,6 +10,9 @@
 		A818272E2992957E0028B2A1 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818272D2992957E0028B2A1 /* UIControl+TestHelpers.swift */; };
 		A8182730299297370028B2A1 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818272F299297370028B2A1 /* UIRefreshControl+TestHelpers.swift */; };
 		A81827322992987D0028B2A1 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81827312992987D0028B2A1 /* UIImage+TestHelpers.swift */; };
+		A81827342992990A0028B2A1 /* TopHeadlineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81827332992990A0028B2A1 /* TopHeadlineHeaderView.swift */; };
+		A81827362992F9640028B2A1 /* RemoteArticleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81827352992F9640028B2A1 /* RemoteArticleLoader.swift */; };
+		A81827382993006C0028B2A1 /* RemoteImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81827372993006C0028B2A1 /* RemoteImageDataLoader.swift */; };
 		A81FF66E298D988000FBCC47 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7234329672A600032087C /* XCTestCase+MemoryLeakTracking.swift */; };
 		A81FF66F298D988000FBCC47 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C72349296733160032087C /* SharedTestHelpers.swift */; };
 		A81FF671298D989000FBCC47 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7234C296734D40032087C /* URLProtocolStub.swift */; };
@@ -121,6 +124,9 @@
 		A818272D2992957E0028B2A1 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		A818272F299297370028B2A1 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		A81827312992987D0028B2A1 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
+		A81827332992990A0028B2A1 /* TopHeadlineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineHeaderView.swift; sourceTree = "<group>"; };
+		A81827352992F9640028B2A1 /* RemoteArticleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArticleLoader.swift; sourceTree = "<group>"; };
+		A81827372993006C0028B2A1 /* RemoteImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataLoader.swift; sourceTree = "<group>"; };
 		A81FF6B1298D9DF300FBCC47 /* TopHeadlineUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineUIIntegrationTests.swift; sourceTree = "<group>"; };
 		A84B38B6298047B900612343 /* CoreDataArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataArticleStore.swift; sourceTree = "<group>"; };
 		A84B38B82980482200612343 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
@@ -312,6 +318,7 @@
 			children = (
 				A8677D1A298E8AE50028F72A /* Helpers */,
 				A8677D1B298E8D020028F72A /* TopHeadlineCollectionViewCell.swift */,
+				A81827332992990A0028B2A1 /* TopHeadlineHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -447,6 +454,8 @@
 			isa = PBXGroup;
 			children = (
 				A8C7234F296B25600032087C /* ArticleItemsMapper.swift */,
+				A81827352992F9640028B2A1 /* RemoteArticleLoader.swift */,
+				A81827372993006C0028B2A1 /* RemoteImageDataLoader.swift */,
 			);
 			path = "Article API";
 			sourceTree = "<group>";
@@ -756,6 +765,7 @@
 				A8677D1C298E8D020028F72A /* TopHeadlineCollectionViewCell.swift in Sources */,
 				A8677D17298E869E0028F72A /* TopHeadlineViewController.swift in Sources */,
 				A85AFDC0299042E100C3339D /* UICollectionView+Dequeueing.swift in Sources */,
+				A81827342992990A0028B2A1 /* TopHeadlineHeaderView.swift in Sources */,
 				A85AFDB3298FDAA400C3339D /* Localized.swift in Sources */,
 				A8677D24298EDB730028F72A /* TopHeadlineUIComposer.swift in Sources */,
 				A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */,
@@ -802,7 +812,9 @@
 				A81FF685298D98CD00FBCC47 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				A81FF67A298D98C200FBCC47 /* CoreDataArticleStore.swift in Sources */,
 				A81FF678298D98BD00FBCC47 /* ArticleStore.xcdatamodeld in Sources */,
+				A81827362992F9640028B2A1 /* RemoteArticleLoader.swift in Sources */,
 				A81FF67C298D98C200FBCC47 /* ArticleStore.swift in Sources */,
+				A81827382993006C0028B2A1 /* RemoteImageDataLoader.swift in Sources */,
 				A81FF684298D98CD00FBCC47 /* HTTPClient.swift in Sources */,
 				A81FF67F298D98C200FBCC47 /* LocalArticlesLoader.swift in Sources */,
 				A81FF67E298D98C200FBCC47 /* CoreDataHelpers.swift in Sources */,
