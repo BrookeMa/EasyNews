@@ -11,6 +11,14 @@ extension Localized {
     enum TopHeadline {
         static var table: String { "TopHeadline" }
         
+        static var title: String {
+            NSLocalizedString("TOPHEADLINE_VIEW_TITLE",
+                              tableName: table,
+                              bundle: bundle,
+                              comment: "Title for the top headlines view")
+
+        }
+        
         static var loadError: String {
             NSLocalizedString("TOPHEADLINE_VIEW_CONNECTION_ERROR",
                               tableName: table,

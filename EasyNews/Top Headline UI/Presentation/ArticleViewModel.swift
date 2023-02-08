@@ -22,6 +22,10 @@ final class ArticleViewModel<Image> {
         self.imageLoader = imageLoader
     }
     
+    var title: String {
+        return Localized.TopHeadline.title
+    }
+    
     var author: String? {
         return model.author
     }
