@@ -14,7 +14,7 @@ final class ArticleItemsMapper {
     }
     
     private struct Root: Decodable {
-        private let items: [RemoteArticleItem]
+        private let data: [RemoteArticleItem]
         
         private struct RemoteArticleItem: Decodable {
             let author: String?
@@ -30,7 +30,7 @@ final class ArticleItemsMapper {
         }
         
         var articles: [Article] {
-            items.map {
+            data.map {
                 Article.init(author: $0.author,
                              title: $0.title,
                              description: $0.description,
@@ -44,10 +44,11 @@ final class ArticleItemsMapper {
     private static var OK_200: Int { return 200 }
     
     static func map(_ data: Data, from response: HTTPURLResponse) throws -> [Article] {
-        guard response.isOK, let root = try? JSONDecoder().decode(Root.self, from: data) else {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        guard response.isOK, let root = try? decoder.decode(Root.self, from: data) else {
             throw Error.invalidData
         }
         return root.articles
-    }
-    
+    }    
 }

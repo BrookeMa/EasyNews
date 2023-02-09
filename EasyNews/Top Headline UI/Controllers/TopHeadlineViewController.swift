@@ -62,6 +62,10 @@ public final class TopHeadlineViewController: UICollectionViewController {
         
     }
     
+    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return cellController(forRowAt: indexPath).view(in: collectionView, cellForRowAt: indexPath)
+    }
+    
     private func cellController(forRowAt indexPath: IndexPath) -> TopHeadlineCellController {
         return collectionModel[indexPath.row]
     }
