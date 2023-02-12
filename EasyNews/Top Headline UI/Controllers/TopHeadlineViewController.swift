@@ -73,7 +73,7 @@ public final class TopHeadlineViewController: UICollectionViewController, UIColl
     }
     
     public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        cellController(forRowAt: indexPath).select()
+        cellController(forRowAt: indexPath).selection()
     }
     
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

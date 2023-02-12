@@ -10,7 +10,7 @@ import UIKit
 final class TopHeadlineCellController {
     private let viewModel: ArticleViewModel<UIImage>
     private var cell: TopHeadlineCollectionViewCell?
-    private let selection: () -> Void
+    public let selection: () -> Void
     
     init(viewModel: ArticleViewModel<UIImage>, selection: @escaping () -> Void) {
         self.viewModel = viewModel
@@ -30,10 +30,6 @@ final class TopHeadlineCellController {
     func cancelLoad() {
         releaseCellForReuse()
         viewModel.cancelImageDataLoad()
-    }
-    
-    func select() {
-        selection()
     }
     
     private func binded(_ cell: TopHeadlineCollectionViewCell) -> UICollectionViewCell {
