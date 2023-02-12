@@ -2,7 +2,10 @@
 
 A news app to show my coding skills, including Core Data, network, image cache, unit tests, MVVM e.g. Meanwhile, review iOS development and recent learning
 
-The project is not currently complete yet, due to I am looking for a job, may be finished later
+The project is not currently complete yet, I am going to write three parts, top headlines, search and setting. 
+
+# API Resource
+https://mediastack.com
 
 # TDD
 ## Network
