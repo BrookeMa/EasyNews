@@ -11,6 +11,8 @@ import EasyNews
 
 final class TopHeadlineUIIntegrationTests: XCTestCase {
     
+    
+    
     // MARK: Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: TopHeadlineViewController, loader: LoaderSpy) {

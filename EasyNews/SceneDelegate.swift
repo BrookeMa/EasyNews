@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let remoteArticleLoader = RemoteArticleLoader(url: url, client: client)
         let remoteImageLoader = RemoteImageDataLoader(client: client)
         
-        let topHeadlineViewController = TopHeadlineUIComposer.topHeadlineComposedWith(articleLoader: remoteArticleLoader, imageLoader: remoteImageLoader)
+        let topHeadlineViewController = TopHeadlineUIComposer.topHeadlineComposedWith(articleLoader: remoteArticleLoader, imageLoader: MainQueueDispatchDecorator(decoratee: remoteImageLoader))
         
         window?.rootViewController = topHeadlineViewController
     }

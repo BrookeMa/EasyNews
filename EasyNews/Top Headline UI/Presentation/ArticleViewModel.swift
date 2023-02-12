@@ -38,8 +38,10 @@ final class ArticleViewModel<Image> {
     var onImageLoadingStateChange: Observer<Bool>?
     
     func loadImageData() {
+        guard let url = model.image else { return }
         onImageLoadingStateChange?(true)
-        task = imageLoader.loadImageData(from: model.url) { [weak self] result in
+        
+        task = imageLoader.loadImageData(from: url) { [weak self] result in
             self?.handle(result)
         }
     }

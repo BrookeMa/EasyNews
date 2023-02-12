@@ -50,6 +50,7 @@
 		A8677D21298EC2840028F72A /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8677D20298EC2840028F72A /* ArticleViewModel.swift */; };
 		A8677D24298EDB730028F72A /* TopHeadlineUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8677D23298EDB730028F72A /* TopHeadlineUIComposer.swift */; };
 		A8677D26298EF43F0028F72A /* TopHeadlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8677D25298EF43F0028F72A /* TopHeadlineViewModel.swift */; };
+		A8A04AAE2999318800AFB615 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A04AAD2999318800AFB615 /* MainQueueDispatchDecorator.swift */; };
 		A8AE30B7299166DA00FE7BED /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE30B6299166DA00FE7BED /* XCTestCase+MemoryLeakTracking.swift */; };
 		A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230729671D0C0032087C /* AppDelegate.swift */; };
 		A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230929671D0C0032087C /* SceneDelegate.swift */; };
@@ -148,6 +149,7 @@
 		A8677D23298EDB730028F72A /* TopHeadlineUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineUIComposer.swift; sourceTree = "<group>"; };
 		A8677D25298EF43F0028F72A /* TopHeadlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineViewModel.swift; sourceTree = "<group>"; };
 		A89C0BE9298A864900689FEB /* CacheArticlesUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheArticlesUseCaseTests.swift; sourceTree = "<group>"; };
+		A8A04AAD2999318800AFB615 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		A8A1FBF5298994A300296E97 /* LocalArticlesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArticlesLoader.swift; sourceTree = "<group>"; };
 		A8AE30B6299166DA00FE7BED /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		A8B252D7298147160037B1D4 /* LocalArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArticle.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				A8677D23298EDB730028F72A /* TopHeadlineUIComposer.swift */,
+				A8A04AAD2999318800AFB615 /* MainQueueDispatchDecorator.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -768,6 +771,7 @@
 				A81827342992990A0028B2A1 /* TopHeadlineHeaderView.swift in Sources */,
 				A85AFDB3298FDAA400C3339D /* Localized.swift in Sources */,
 				A8677D24298EDB730028F72A /* TopHeadlineUIComposer.swift in Sources */,
+				A8A04AAE2999318800AFB615 /* MainQueueDispatchDecorator.swift in Sources */,
 				A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */,
 				A8677D26298EF43F0028F72A /* TopHeadlineViewModel.swift in Sources */,
 				A85AFDBC298FDD3A00C3339D /* Localized+TopHeadlineViewModel.swift in Sources */,

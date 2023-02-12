@@ -17,7 +17,6 @@ final class TopHeadlineCellController {
     
     func view(in collectionView: UICollectionView, cellForRowAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = binded(collectionView.dequeueResuableCell(for: indexPath))
-        
         viewModel.loadImageData()
         return cell
     }
@@ -36,7 +35,9 @@ final class TopHeadlineCellController {
         
         cell.authorLabel.text = viewModel.author
         cell.descriptionLabel.text = viewModel.description
-        
+        viewModel.onImageLoad = { [weak self] image in
+            self?.cell?.imageView.image = image
+        }
         
         return cell
     }

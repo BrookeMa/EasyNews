@@ -12,7 +12,7 @@ public final class TopHeadlineUIComposer {
     private init() {}
     
     public static func topHeadlineComposedWith(articleLoader: ArticleLoader, imageLoader: ImageDataLoader) -> TopHeadlineViewController {
-        let topHeadlineViewModel = TopHeadlineViewModel(articleLoader: articleLoader)
+        let topHeadlineViewModel = TopHeadlineViewModel(articleLoader: MainQueueDispatchDecorator(decoratee: articleLoader))
         
         let topHeadlineController = TopHeadlineViewController.makeWith(viewModel: topHeadlineViewModel)
         

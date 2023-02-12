@@ -21,7 +21,6 @@ public final class RemoteImageDataLoader: ImageDataLoader {
     
     private final class HTTPClientTaskWrapper: ImageDataLoaderTask {
         
-        
         private var completion: ((ImageDataLoader.Result) -> Void)?
         
         var wrapped: HTTPClientTask?
