@@ -11,7 +11,19 @@ import EasyNews
 
 final class TopHeadlineUIIntegrationTests: XCTestCase {
     
-    
+    func test_loadArticleActions_requestArticleFromLoader() {
+        let (sut, loader) = makeSUT()
+        XCTAssertEqual(loader.loadFeedCallCount, 0, "Expected no loading requests before view is loaded")
+
+        sut.loadViewIfNeeded()
+        XCTAssertEqual(loader.loadFeedCallCount, 1, "Expected a loading request once view is loaded")
+
+        sut.simulateUserInitiatedArticlesReload()
+        XCTAssertEqual(loader.loadFeedCallCount, 2, "Expected another loading request once user initiates a reload")
+
+        sut.simulateUserInitiatedArticlesReload()
+        XCTAssertEqual(loader.loadFeedCallCount, 3, "Expected yet another loading request once user initiates another reload")
+    }
     
     // MARK: Helpers
     

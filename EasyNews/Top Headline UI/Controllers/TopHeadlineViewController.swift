@@ -9,7 +9,7 @@ import UIKit
 
 public final class TopHeadlineViewController: UICollectionViewController, UICollectionViewDataSourcePrefetching {
     
-    private lazy var refreshControl: UIRefreshControl = {
+    private(set) public lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
        
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
