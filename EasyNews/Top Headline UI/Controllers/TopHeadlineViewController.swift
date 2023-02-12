@@ -20,8 +20,8 @@ public final class TopHeadlineViewController: UICollectionViewController, UIColl
     
     private lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 3)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         return layout
@@ -69,11 +69,11 @@ public final class TopHeadlineViewController: UICollectionViewController, UIColl
     }
     
     public override func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
+        cancelCellControllerLoad(forRowAt: indexPath)
     }
     
     public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        cellController(forRowAt: indexPath).select()
     }
     
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

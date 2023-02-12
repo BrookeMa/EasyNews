@@ -31,7 +31,7 @@ final class TopHeadlineCollectionViewCell: UICollectionViewCell {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 18),
+            label.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 18),
             label.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             label.leftAnchor.constraint(equalTo: contentView.leftAnchor),
         ])
@@ -46,7 +46,7 @@ final class TopHeadlineCollectionViewCell: UICollectionViewCell {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: authorLabel.topAnchor, constant: 18),
+            label.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 18),
             label.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             label.leftAnchor.constraint(equalTo: contentView.leftAnchor),
         ])

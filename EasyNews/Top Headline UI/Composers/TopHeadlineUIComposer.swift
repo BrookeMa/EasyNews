@@ -24,7 +24,9 @@ public final class TopHeadlineUIComposer {
     private static func adaptArticleToCellControllers(forwardingTo controller: TopHeadlineViewController, imageLoader: ImageDataLoader) -> ([Article]) -> Void {
         return { [weak controller] article in
             controller?.collectionModel = article.map { model in
-                TopHeadlineCellController(viewModel: ArticleViewModel(model: model, imageTransformer: UIImage.init, imageLoader: imageLoader))
+                TopHeadlineCellController(viewModel: ArticleViewModel(model: model, imageTransformer: UIImage.init, imageLoader: imageLoader)) {
+                    controller?.show(WebViewController.makeWith(url: model.url), sender: self)
+                }
             }
         }
     }
@@ -37,6 +39,14 @@ private extension TopHeadlineViewController {
         let viewController = storyboard.instantiateInitialViewController() as! TopHeadlineViewController
         viewController.viewModel = viewModel
         return viewController
+    }
+}
+
+private extension WebViewController {
+    static func makeWith(url: URL) -> WebViewController {
+        let webViewController = WebViewController()
+        webViewController.url = url
+        return webViewController
     }
 }
 

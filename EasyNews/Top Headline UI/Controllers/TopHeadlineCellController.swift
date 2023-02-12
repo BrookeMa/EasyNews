@@ -10,9 +10,11 @@ import UIKit
 final class TopHeadlineCellController {
     private let viewModel: ArticleViewModel<UIImage>
     private var cell: TopHeadlineCollectionViewCell?
+    private let selection: () -> Void
     
-    init(viewModel: ArticleViewModel<UIImage>) {
+    init(viewModel: ArticleViewModel<UIImage>, selection: @escaping () -> Void) {
         self.viewModel = viewModel
+        self.selection = selection
     }
     
     func view(in collectionView: UICollectionView, cellForRowAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -28,6 +30,10 @@ final class TopHeadlineCellController {
     func cancelLoad() {
         releaseCellForReuse()
         viewModel.cancelImageDataLoad()
+    }
+    
+    func select() {
+        selection()
     }
     
     private func binded(_ cell: TopHeadlineCollectionViewCell) -> UICollectionViewCell {

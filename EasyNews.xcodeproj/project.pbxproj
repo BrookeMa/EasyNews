@@ -51,7 +51,7 @@
 		A8677D24298EDB730028F72A /* TopHeadlineUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8677D23298EDB730028F72A /* TopHeadlineUIComposer.swift */; };
 		A8677D26298EF43F0028F72A /* TopHeadlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8677D25298EF43F0028F72A /* TopHeadlineViewModel.swift */; };
 		A8A04AAE2999318800AFB615 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A04AAD2999318800AFB615 /* MainQueueDispatchDecorator.swift */; };
-		A8A04AB12999694100AFB615 /* WebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A04AB02999694100AFB615 /* WebviewController.swift */; };
+		A8A04AB12999694100AFB615 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A04AB02999694100AFB615 /* WebViewController.swift */; };
 		A8AE30B7299166DA00FE7BED /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE30B6299166DA00FE7BED /* XCTestCase+MemoryLeakTracking.swift */; };
 		A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230729671D0C0032087C /* AppDelegate.swift */; };
 		A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230929671D0C0032087C /* SceneDelegate.swift */; };
@@ -151,7 +151,7 @@
 		A8677D25298EF43F0028F72A /* TopHeadlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineViewModel.swift; sourceTree = "<group>"; };
 		A89C0BE9298A864900689FEB /* CacheArticlesUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheArticlesUseCaseTests.swift; sourceTree = "<group>"; };
 		A8A04AAD2999318800AFB615 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
-		A8A04AB02999694100AFB615 /* WebviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewController.swift; sourceTree = "<group>"; };
+		A8A04AB02999694100AFB615 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A8A1FBF5298994A300296E97 /* LocalArticlesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArticlesLoader.swift; sourceTree = "<group>"; };
 		A8AE30B6299166DA00FE7BED /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		A8B252D7298147160037B1D4 /* LocalArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArticle.swift; sourceTree = "<group>"; };
@@ -354,12 +354,12 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
-		A8A04AAF2999689800AFB615 /* WebViewController */ = {
+		A8A04AAF2999689800AFB615 /* WebView UI */ = {
 			isa = PBXGroup;
 			children = (
-				A8A04AB02999694100AFB615 /* WebviewController.swift */,
+				A8A04AB02999694100AFB615 /* WebViewController.swift */,
 			);
-			path = WebViewController;
+			path = "WebView UI";
 			sourceTree = "<group>";
 		};
 		A8AE30B52991667F00FE7BED /* Helpers */ = {
@@ -431,7 +431,7 @@
 		A8C7230629671D0C0032087C /* EasyNews */ = {
 			isa = PBXGroup;
 			children = (
-				A8A04AAF2999689800AFB615 /* WebViewController */,
+				A8A04AAF2999689800AFB615 /* WebView UI */,
 				A85AFDC12990433200C3339D /* Shared Helpers */,
 				A85AFDBA298FDD1200C3339D /* Shared Presentation */,
 				A8677D15298E867E0028F72A /* Top Headline UI */,
@@ -778,7 +778,7 @@
 				A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */,
 				A8677D1C298E8D020028F72A /* TopHeadlineCollectionViewCell.swift in Sources */,
 				A8677D17298E869E0028F72A /* TopHeadlineViewController.swift in Sources */,
-				A8A04AB12999694100AFB615 /* WebviewController.swift in Sources */,
+				A8A04AB12999694100AFB615 /* WebViewController.swift in Sources */,
 				A85AFDC0299042E100C3339D /* UICollectionView+Dequeueing.swift in Sources */,
 				A81827342992990A0028B2A1 /* TopHeadlineHeaderView.swift in Sources */,
 				A85AFDB3298FDAA400C3339D /* Localized.swift in Sources */,
