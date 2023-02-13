@@ -13,23 +13,32 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
     
     func test_loadArticleActions_requestArticleFromLoader() {
         let (sut, loader) = makeSUT()
-        XCTAssertEqual(loader.loadFeedCallCount, 0, "Expected no loading requests before view is loaded")
+        XCTAssertEqual(loader.loadArticleCallCount, 0, "Expected no loading requests before view is loaded")
 
         sut.loadViewIfNeeded()
-        XCTAssertEqual(loader.loadFeedCallCount, 1, "Expected a loading request once view is loaded")
+        XCTAssertEqual(loader.loadArticleCallCount, 1, "Expected a loading request once view is loaded")
 
         sut.simulateUserInitiatedArticlesReload()
-        XCTAssertEqual(loader.loadFeedCallCount, 2, "Expected another loading request once user initiates a reload")
+        XCTAssertEqual(loader.loadArticleCallCount, 2, "Expected another loading request once user initiates a reload")
 
         sut.simulateUserInitiatedArticlesReload()
-        XCTAssertEqual(loader.loadFeedCallCount, 3, "Expected yet another loading request once user initiates another reload")
+        XCTAssertEqual(loader.loadArticleCallCount, 3, "Expected yet another loading request once user initiates another reload")
     }
     
     func test_loadingTopHeadlinesIndicator_isVisibleLoadingArticle() {
         let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
+        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is loaded")
         
+        loader.completeArticleLoading(at: 0)
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once loading completes successfully")
+        
+        sut.simulateUserInitiatedArticlesReload()
+        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once user initiates a reload")
+        
+        loader.completeArticleLoadingWithError(at: 1)
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading completes with error")
     }
     
     // MARK: Helpers
@@ -43,26 +52,26 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
     }
     
     class LoaderSpy: ArticleLoader, ImageDataLoader {
-        private var feedRequests = [(ArticleLoader.Result) -> Void]()
+        private var articleRequests = [(ArticleLoader.Result) -> Void]()
 
-        var loadFeedCallCount: Int {
-            return feedRequests.count
+        var loadArticleCallCount: Int {
+            return articleRequests.count
         }
 
         func load(completion: @escaping (ArticleLoader.Result) -> Void) {
-            feedRequests.append(completion)
+            articleRequests.append(completion)
         }
 
-        func completeFeedLoading(with articles: [Article] = [], at index: Int = 0) {
-            feedRequests[index](.success(articles))
+        func completeArticleLoading(with articles: [Article] = [], at index: Int = 0) {
+            articleRequests[index](.success(articles))
         }
 
-        func completeFeedLoadingWithError(at index: Int = 0) {
+        func completeArticleLoadingWithError(at index: Int = 0) {
             let error = NSError(domain: "an error", code: 0)
-            feedRequests[index](.failure(error))
+            articleRequests[index](.failure(error))
         }
         
-        // MARK: ImageDataLoader
+        // MARK: - ImageDataLoader
         
         private struct TaskSpy: ImageDataLoaderTask {
             let cancelCallback: () -> Void

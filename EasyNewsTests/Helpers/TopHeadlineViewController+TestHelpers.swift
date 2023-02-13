@@ -12,5 +12,9 @@ extension TopHeadlineViewController {
     func simulateUserInitiatedArticlesReload() {
         refreshControl.simulatePullToRefresh()
     }
+    
+    var isShowingLoadingIndicator: Bool  {
+        return refreshControl.isRefreshing == true
+    }
 }
 

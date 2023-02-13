@@ -25,7 +25,7 @@ public final class TopHeadlineUIComposer {
         return { [weak controller] article in
             controller?.collectionModel = article.map { model in
                 TopHeadlineCellController(viewModel: ArticleViewModel(model: model, imageTransformer: UIImage.init, imageLoader: imageLoader)) {
-                    controller?.show(WebViewController.makeWith(url: model.url), sender: self)
+                    controller?.show(WebViewController.makeWith(url: model.url), sender: controller)
                 }
             }
         }
