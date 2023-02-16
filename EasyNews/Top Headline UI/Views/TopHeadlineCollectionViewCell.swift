@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TopHeadlineCollectionViewCell: UICollectionViewCell {
+public final class TopHeadlineCollectionViewCell: UICollectionViewCell {
     private(set) public lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill

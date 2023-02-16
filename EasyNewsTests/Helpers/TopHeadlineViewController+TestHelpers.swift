@@ -16,5 +16,19 @@ extension TopHeadlineViewController {
     var isShowingLoadingIndicator: Bool  {
         return refreshControl.isRefreshing == true
     }
+    
+    func numberOfRenderedArticleViews() -> Int {
+        return collectionView.numberOfItems(inSection: articlesSection)
+    }
+    
+    func articleView(at row: Int) -> UICollectionViewCell? {
+        let ds = collectionView.dataSource
+        let index = IndexPath(row: row, section: articlesSection)
+        return ds?.collectionView(collectionView, cellForItemAt: index)
+    }
+    
+    var articlesSection: Int {
+        return 0
+    }
 }
 

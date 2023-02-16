@@ -41,6 +41,25 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading completes with error")
     }
     
+    func test_loadArticleCompletion_rendersSuccessfullyLoadedArticle() {
+        let article0 = makeArticle(author: "author", title: "a title", description: "a descrption", url: anyURL(), source: "a source", image: anyURL())
+        let article1 = makeArticle(author: nil, title: "a title", description: "a descrption", url: anyURL(), source: "a source", image: anyURL())
+        let article2 = makeArticle(author: "author", title: "a title", description: "a descrption", url: anyURL(), source: "a source", image: nil)
+        let article3 = makeArticle(author: nil, title: "a title", description: "a descrption", url: anyURL(), source: "a source", image: nil)
+        
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        assertThat(sut, isRendering: [])
+        
+        loader.completeArticleLoading(with: [article0], at: 0)
+        assertThat(sut, isRendering: [article0])
+        
+        sut.simulateUserInitiatedArticlesReload()
+        loader.completeArticleLoading(with: [article0, article1, article2, article3], at: 1)
+        assertThat(sut, isRendering: [article0, article1, article2, article3])
+    }
+    
     // MARK: Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: TopHeadlineViewController, loader: LoaderSpy) {
@@ -101,6 +120,10 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
             let error = NSError(domain: "an error", code: 0)
             imageRequests[index].completion(.failure(error))
         }
+    }
+    
+    func makeArticle(author: String?, title: String, description: String, url: URL, source: String, image: URL? = URL(string: "http://any-url.com")!, published: Date = Date()) -> Article {
+        return Article(author: author, title: title, description: description, url: url, source: source, image: image, published: published)
     }
 }
 

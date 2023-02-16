@@ -34,6 +34,10 @@ final class ArticleViewModel<Image> {
         return model.description
     }
     
+    var date: String {
+        return model.published.timeAgoDisplay()
+    }
+    
     var onImageLoad: Observer<Image>?
     var onImageLoadingStateChange: Observer<Bool>?
     

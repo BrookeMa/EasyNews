@@ -37,6 +37,7 @@ final class TopHeadlineCellController {
         
         cell.authorLabel.text = viewModel.author
         cell.descriptionLabel.text = viewModel.description
+        cell.dateLabel.text = viewModel.date
         viewModel.onImageLoad = { [weak self] image in
             self?.cell?.imageView.image = image
         }
