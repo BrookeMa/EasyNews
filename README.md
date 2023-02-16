@@ -1,7 +1,7 @@
 # Overview
 
-A news app to show my coding skills, including Core Data, network, image cache, unit tests, MVVM e.g. 
 The project is not currently complete yet, I am going to write three parts, top headlines, search and setting. 
+
 
 # API Resource
 https://mediastack.com
