@@ -32,6 +32,14 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="163" height="185"/>
                             </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopHeadlineWithoutImageCollectionViewCell" id="wUm-bg-HNo" customClass="TopHeadlineWithoutImageCollectionViewCell" customModule="EasyNews" customModuleProvider="target">
+                                <rect key="frame" x="230" y="0.0" width="163" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dns-MW-cIw">
+                                    <rect key="frame" x="0.0" y="0.0" width="163" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
                         </cells>
                         <connections>
                             <outlet property="dataSource" destination="QOv-JU-0A2" id="3Y2-TQ-mvg"/>
@@ -41,7 +49,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJb-kL-BVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="-140"/>
+            <point key="canvasLocation" x="244" y="-146"/>
         </scene>
     </scenes>
     <resources>

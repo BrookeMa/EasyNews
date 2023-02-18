@@ -16,7 +16,7 @@ public final class TopHeadlineWithoutImageCollectionViewCell: UICollectionViewCe
         
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 18),
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 18),
             label.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             label.leftAnchor.constraint(equalTo: contentView.leftAnchor),
         ])

@@ -24,8 +24,15 @@ public final class TopHeadlineUIComposer {
     private static func adaptArticleToCellControllers(forwardingTo controller: TopHeadlineViewController, imageLoader: ImageDataLoader) -> ([Article]) -> Void {
         return { [weak controller] article in
             controller?.collectionModel = article.map { model in
-                TopHeadlineCellController(viewModel: ArticleViewModel(model: model, imageTransformer: UIImage.init, imageLoader: imageLoader)) {
+                let viewModel = ArticleViewModel(model: model, imageTransformer: UIImage.init, imageLoader: imageLoader)
+                var selection: () -> Void = {
                     controller?.show(WebViewController.makeWith(url: model.url), sender: controller)
+                }
+                
+                if model.image != nil {
+                    return TopHeadlineImageCellController(viewModel: viewModel, selection: selection)
+                } else {
+                    return TopHeadlineWithoutImageViewCellController(viewModel: viewModel, selection: selection)
                 }
             }
         }
