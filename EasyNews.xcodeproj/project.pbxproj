@@ -57,6 +57,8 @@
 		A8A04AB32999852800AFB615 /* TopHeadlineViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A04AB22999852800AFB615 /* TopHeadlineViewController+TestHelpers.swift */; };
 		A8AE30B7299166DA00FE7BED /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE30B6299166DA00FE7BED /* XCTestCase+MemoryLeakTracking.swift */; };
 		A8C377DA299E9EEB00B73AED /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C377D9299E9EEB00B73AED /* Date+Helpers.swift */; };
+		A8C377DC29A1083600B73AED /* TopHeadlineWithoutImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C377DB29A1083600B73AED /* TopHeadlineWithoutImageCollectionViewCell.swift */; };
+		A8C377DE29A10B2600B73AED /* TopHeadlineWithoutImageViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C377DD29A10B2600B73AED /* TopHeadlineWithoutImageViewCellController.swift */; };
 		A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230729671D0C0032087C /* AppDelegate.swift */; };
 		A8C7230A29671D0C0032087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7230929671D0C0032087C /* SceneDelegate.swift */; };
 		A8C7230F29671D0C0032087C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7230D29671D0C0032087C /* Main.storyboard */; };
@@ -166,6 +168,8 @@
 		A8B252E32982C31F0037B1D4 /* ArticleStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStoreSpy.swift; sourceTree = "<group>"; };
 		A8B252E52982C5650037B1D4 /* ArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
 		A8C377D9299E9EEB00B73AED /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		A8C377DB29A1083600B73AED /* TopHeadlineWithoutImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineWithoutImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A8C377DD29A10B2600B73AED /* TopHeadlineWithoutImageViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineWithoutImageViewCellController.swift; sourceTree = "<group>"; };
 		A8C7230429671D0C0032087C /* EasyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C7230729671D0C0032087C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C7230929671D0C0032087C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +326,7 @@
 			children = (
 				A8677D16298E869E0028F72A /* TopHeadlineViewController.swift */,
 				A85AFDBD29900D0F00C3339D /* TopHeadlineCellController.swift */,
+				A8C377DD29A10B2600B73AED /* TopHeadlineWithoutImageViewCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				A8677D1A298E8AE50028F72A /* Helpers */,
 				A8677D1B298E8D020028F72A /* TopHeadlineCollectionViewCell.swift */,
 				A81827332992990A0028B2A1 /* TopHeadlineHeaderView.swift */,
+				A8C377DB29A1083600B73AED /* TopHeadlineWithoutImageCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -786,12 +792,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8C377DC29A1083600B73AED /* TopHeadlineWithoutImageCollectionViewCell.swift in Sources */,
 				A8C7231229671D0C0032087C /* EasyNews.xcdatamodeld in Sources */,
 				A8C7230829671D0C0032087C /* AppDelegate.swift in Sources */,
 				A8677D1C298E8D020028F72A /* TopHeadlineCollectionViewCell.swift in Sources */,
 				A8677D17298E869E0028F72A /* TopHeadlineViewController.swift in Sources */,
 				A8A04AB12999694100AFB615 /* WebViewController.swift in Sources */,
 				A85AFDC0299042E100C3339D /* UICollectionView+Dequeueing.swift in Sources */,
+				A8C377DE29A10B2600B73AED /* TopHeadlineWithoutImageViewCellController.swift in Sources */,
 				A81827342992990A0028B2A1 /* TopHeadlineHeaderView.swift in Sources */,
 				A85AFDB3298FDAA400C3339D /* Localized.swift in Sources */,
 				A8677D24298EDB730028F72A /* TopHeadlineUIComposer.swift in Sources */,

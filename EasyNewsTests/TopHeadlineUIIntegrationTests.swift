@@ -60,6 +60,10 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         assertThat(sut, isRendering: [article0, article1, article2, article3])
     }
     
+    func test_loadArticleCompletion_doesNotAlterCurrentRenderingStateOnError() {
+        
+    }
+    
     // MARK: Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: TopHeadlineViewController, loader: LoaderSpy) {
