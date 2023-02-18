@@ -61,7 +61,16 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
     }
     
     func test_loadArticleCompletion_doesNotAlterCurrentRenderingStateOnError() {
+        let article = makeArticle()
+        let (sut, loader) = makeSUT()
         
+        sut.loadViewIfNeeded()
+        loader.completeArticleLoading(with: [article], at: 0)
+        assertThat(sut, isRendering: [article])
+        
+        sut.simulateUserInitiatedArticlesReload()
+        loader.completeArticleLoadingWithError(at: 1)
+        assertThat(sut, isRendering: [article])
     }
     
     // MARK: Helpers
@@ -126,7 +135,7 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         }
     }
     
-    func makeArticle(author: String?, title: String, description: String, url: URL, source: String, image: URL? = URL(string: "http://any-url.com")!, published: Date = Date()) -> Article {
+    func makeArticle(author: String? = nil, title: String = "a title", description: String = "a description", url: URL = anyURL(), source: String = "a source", image: URL? = anyURL(), published: Date = Date()) -> Article {
         return Article(author: author, title: title, description: description, url: url, source: source, image: image, published: published)
     }
 }
