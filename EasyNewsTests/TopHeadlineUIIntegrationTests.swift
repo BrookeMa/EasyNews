@@ -73,6 +73,24 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         assertThat(sut, isRendering: [article])
     }
     
+    func test_articleImageView_loadsImageURLWhenVisible() {
+        let article0 = makeArticle(image: anyURL())
+        let article1 = makeArticle(image: anyURL())
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        loader.completeArticleLoading(with: [article0, article1])
+        
+        XCTAssertEqual(loader.loadedImageURLs, [], "Expected no image URL request until views become visible")
+        
+        sut.simulateArticleImageViewVisible(at: 0)
+        XCTAssertEqual(loader.loadedImageURLs, [article0.image], "Expected first image URL requet once first view becomes visible")
+        
+        sut.simulateArticleImageViewVisible(at: 1)
+        XCTAssertEqual(loader.loadedImageURLs, [article0.image, article1.image], "Expected second article URL request once second view also ")
+    }
+    
+    
     // MARK: Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: TopHeadlineViewController, loader: LoaderSpy) {
@@ -137,6 +155,10 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
     
     func makeArticle(author: String? = nil, title: String = "a title", description: String = "a description", url: URL = anyURL(), source: String = "a source", image: URL? = anyURL(), published: Date = Date()) -> Article {
         return Article(author: author, title: title, description: description, url: url, source: source, image: image, published: published)
+    }
+    
+    private func anyImageData() -> Data {
+        return UIImage.make(withColor: .red).pngData()!
     }
 }
 
