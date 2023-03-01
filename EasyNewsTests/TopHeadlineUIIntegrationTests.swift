@@ -90,6 +90,22 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         XCTAssertEqual(loader.loadedImageURLs, [article0.image, article1.image], "Expected second article URL request once second view also ")
     }
     
+    func test_articleWithoutImageView_loadsWithoutImageURLWhenVisible() {
+        let article0 = makeArticle(image: nil)
+        let article1 = makeArticle(image: nil)
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        loader.completeArticleLoading(with: [article0, article1])
+        
+        XCTAssertEqual(loader.loadedImageURLs, [], "Expected no image URL request until views become visible")
+        
+        sut.simulateArticleWithouImageVIewVisiblbe(at: 0)
+        XCTAssertEqual(loader.loadedImageURLs, [], "Expected first without image URL requet once first view becomes visible")
+        
+        sut.simulateArticleWithouImageVIewVisiblbe(at: 1)
+        XCTAssertEqual(loader.loadedImageURLs, [], "Expected second article URL request once second view also ")
+    }
     
     // MARK: Helpers
     
@@ -153,7 +169,7 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         }
     }
     
-    func makeArticle(author: String? = nil, title: String = "a title", description: String = "a description", url: URL = anyURL(), source: String = "a source", image: URL? = anyURL(), published: Date = Date()) -> Article {
+    func makeArticle(author: String? = nil, title: String = "a title", description: String = "a description \(UUID())", url: URL = anyURL(), source: String = "a source", image: URL? = anyURL(), published: Date = Date()) -> Article {
         return Article(author: author, title: title, description: description, url: url, source: source, image: image, published: published)
     }
     
