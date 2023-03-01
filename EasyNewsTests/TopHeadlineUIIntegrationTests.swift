@@ -107,6 +107,24 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         XCTAssertEqual(loader.loadedImageURLs, [], "Expected second article URL request once second view also ")
     }
     
+    func test_articleImageView_cancelsImageLoadingWhenNotVisibleAnymore() {
+        
+        let article0 = makeArticle()
+        let article1 = makeArticle()
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        loader.completeArticleLoading(with: [article0, article1])
+        XCTAssertEqual(loader.cancelledImageURLs, [], "Expected no cannelled image URL requests until image is not visible")
+        
+        sut.simulateArticleImageViewNotVisble(at: 0)
+        XCTAssertEqual(loader.cancelledImageURLs, [article0.image], "Expected one cannelled image URL requests once first image is not visible")
+
+        sut.simulateArticleImageViewNotVisble(at: 1)
+        XCTAssertEqual(loader.cancelledImageURLs, [article0.image, article1.image], "Expected tow canneled image URL requests once seccond image is also not visible anymore")
+    }
+    
+    
     // MARK: Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: TopHeadlineViewController, loader: LoaderSpy) {
