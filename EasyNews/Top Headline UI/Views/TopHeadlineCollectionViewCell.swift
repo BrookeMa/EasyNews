@@ -8,7 +8,7 @@
 import UIKit
 
 public final class TopHeadlineCollectionViewCell: UICollectionViewCell {
-    private(set) public lazy var imageView: UIImageView = {
+    public lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         contentView.addSubview(imageView)
@@ -24,7 +24,7 @@ public final class TopHeadlineCollectionViewCell: UICollectionViewCell {
         return imageView
     } ()
     
-    private(set) public lazy var authorLabel: UILabel = {
+    public lazy var authorLabel: UILabel = {
         let label = UILabel()
         label.textColor = .darkGray
         contentView.addSubview(label)
@@ -39,7 +39,7 @@ public final class TopHeadlineCollectionViewCell: UICollectionViewCell {
         return label
     } ()
     
-    private(set) public lazy var descriptionLabel: UILabel = {
+    public lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.textColor = .darkText
         contentView.addSubview(label)
@@ -53,7 +53,7 @@ public final class TopHeadlineCollectionViewCell: UICollectionViewCell {
         return label
     } ()
 
-    private(set) public lazy var dateLabel: UILabel = {
+    public lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.textColor = .lightGray
         contentView.addSubview(label)

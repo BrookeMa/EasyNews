@@ -124,6 +124,17 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         XCTAssertEqual(loader.cancelledImageURLs, [article0.image, article1.image], "Expected tow canneled image URL requests once seccond image is also not visible anymore")
     }
     
+    func test_aritcleImageView_rendersImageLoadedFromURL() {
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        loader.completeArticleLoading(with: [makeArticle(), makeArticle()])
+        
+        let view0 = sut.simulateArticleImageViewVisible(at: 0)
+        let view1 = sut.simulateArticleImageViewVisible(at: 1)
+        
+//        XCTAssertEqual(view1, <#T##expression2: Equatable##Equatable#>)
+    }
     
     // MARK: Helpers
     

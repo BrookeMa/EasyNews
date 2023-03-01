@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A813DF1429AFCCC800744EEC /* TopHeadlineCollectionViewCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813DF1329AFCCC800744EEC /* TopHeadlineCollectionViewCell+TestHelpers.swift */; };
 		A818272E2992957E0028B2A1 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818272D2992957E0028B2A1 /* UIControl+TestHelpers.swift */; };
 		A8182730299297370028B2A1 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818272F299297370028B2A1 /* UIRefreshControl+TestHelpers.swift */; };
 		A81827322992987D0028B2A1 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81827312992987D0028B2A1 /* UIImage+TestHelpers.swift */; };
@@ -130,6 +131,7 @@
 /* Begin PBXFileReference section */
 		A8138B3D2980399500A24E4F /* ManagedArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedArticle.swift; sourceTree = "<group>"; };
 		A8138B4329803AC500A24E4F /* ArticleStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleStore.xcdatamodel; sourceTree = "<group>"; };
+		A813DF1329AFCCC800744EEC /* TopHeadlineCollectionViewCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopHeadlineCollectionViewCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		A818272D2992957E0028B2A1 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		A818272F299297370028B2A1 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		A81827312992987D0028B2A1 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				A8A04AB22999852800AFB615 /* TopHeadlineViewController+TestHelpers.swift */,
 				A8677E7D299ACE7700A27D9C /* SharedTestHelpers.swift */,
 				A8677E7F299AD5F600A27D9C /* TopHeadlineViewController+Assertions.swift */,
+				A813DF1329AFCCC800744EEC /* TopHeadlineCollectionViewCell+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -822,6 +825,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A818272E2992957E0028B2A1 /* UIControl+TestHelpers.swift in Sources */,
+				A813DF1429AFCCC800744EEC /* TopHeadlineCollectionViewCell+TestHelpers.swift in Sources */,
 				A8182730299297370028B2A1 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				A8677E7E299ACE7700A27D9C /* SharedTestHelpers.swift in Sources */,
 				A8677E80299AD5F600A27D9C /* TopHeadlineViewController+Assertions.swift in Sources */,
