@@ -133,7 +133,18 @@ final class TopHeadlineUIIntegrationTests: XCTestCase {
         let view0 = sut.simulateArticleImageViewVisible(at: 0)
         let view1 = sut.simulateArticleImageViewVisible(at: 1)
         
-//        XCTAssertEqual(view1, <#T##expression2: Equatable##Equatable#>)
+        XCTAssertEqual(view0?.renderedImage, .none, "Expected no image for first view while loading first image")
+        XCTAssertEqual(view1?.renderedImage, .none, "Expected no image for first view while loading first image")
+
+        let imageData0  = UIImage.make(withColor: .blue).pngData()!
+        loader.completeImageLoading(with: imageData0, at: 0)
+        XCTAssertEqual(view0?.renderedImage, imageData0, "Expected image for first view once first image loading completes successfully")
+        XCTAssertEqual(view1?.renderedImage, .none, "Expected no image state change for second view once first image loading completes successfully")
+        
+        let imageData1 = UIImage.make(withColor: .green).pngData()!
+        loader.completeImageLoading(with: imageData1, at: 1)
+        XCTAssertEqual(view0?.renderedImage, imageData0, "Expected image for first view once first image loading completes successfully")
+        XCTAssertEqual(view1?.renderedImage, imageData1, "Expected no image state change for second view once first image loading completes successfully")
     }
     
     // MARK: Helpers

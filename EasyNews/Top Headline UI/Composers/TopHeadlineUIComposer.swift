@@ -25,7 +25,7 @@ public final class TopHeadlineUIComposer {
         return { [weak controller] article in
             controller?.collectionModel = article.map { model in
                 let viewModel = ArticleViewModel(model: model, imageTransformer: UIImage.init, imageLoader: imageLoader)
-                var selection: () -> Void = {
+                let selection: () -> Void = {
                     controller?.show(WebViewController.makeWith(url: model.url), sender: controller)
                 }
                 
